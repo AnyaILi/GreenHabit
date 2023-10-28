@@ -14,6 +14,19 @@
 		6191FAB82AE902E100A400FA /* GreenHabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAB72AE902E100A400FA /* GreenHabitTests.swift */; };
 		6191FAC22AE902E100A400FA /* GreenHabitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAC12AE902E100A400FA /* GreenHabitUITests.swift */; };
 		6191FAC42AE902E100A400FA /* GreenHabitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAC32AE902E100A400FA /* GreenHabitUITestsLaunchTests.swift */; };
+		6191FAD12AE9034500A400FA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAD02AE9034500A400FA /* Profile.swift */; };
+		6191FAD42AE9036600A400FA /* NewProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAD22AE9035E00A400FA /* NewProfileView.swift */; };
+		6191FAD62AE9039300A400FA /* LocationSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAD52AE9039300A400FA /* LocationSearchService.swift */; };
+		6191FAD82AE903B600A400FA /* AddressPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAD72AE903B600A400FA /* AddressPicker.swift */; };
+		6191FADA2AE903CC00A400FA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAD92AE903CC00A400FA /* SearchBar.swift */; };
+		6191FADC2AE9040E00A400FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FADB2AE9040E00A400FA /* SceneDelegate.swift */; };
+		6191FADE2AE9042500A400FA /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FADD2AE9042500A400FA /* Homepage.swift */; };
+		6191FAE02AE9044D00A400FA /* InfoBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FADF2AE9044D00A400FA /* InfoBoard.swift */; };
+		6191FAE22AE9046300A400FA /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAE12AE9046300A400FA /* TimePicker.swift */; };
+		6191FAE42AE9048700A400FA /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAE32AE9048700A400FA /* ProfileItem.swift */; };
+		6191FAE62AE904BC00A400FA /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAE52AE904BC00A400FA /* ContentViewModel.swift */; };
+		6191FAE82AE904DA00A400FA /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAE72AE904DA00A400FA /* ProfileStore.swift */; };
+		6191FAF02AEA55C400A400FA /* GeneralTimeReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAEF2AEA55C400A400FA /* GeneralTimeReminders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +57,19 @@
 		6191FABD2AE902E100A400FA /* GreenHabitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenHabitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6191FAC12AE902E100A400FA /* GreenHabitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenHabitUITests.swift; sourceTree = "<group>"; };
 		6191FAC32AE902E100A400FA /* GreenHabitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenHabitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6191FAD02AE9034500A400FA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		6191FAD22AE9035E00A400FA /* NewProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileView.swift; sourceTree = "<group>"; };
+		6191FAD52AE9039300A400FA /* LocationSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchService.swift; sourceTree = "<group>"; };
+		6191FAD72AE903B600A400FA /* AddressPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressPicker.swift; sourceTree = "<group>"; };
+		6191FAD92AE903CC00A400FA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		6191FADB2AE9040E00A400FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6191FADD2AE9042500A400FA /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
+		6191FADF2AE9044D00A400FA /* InfoBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBoard.swift; sourceTree = "<group>"; };
+		6191FAE12AE9046300A400FA /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		6191FAE32AE9048700A400FA /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
+		6191FAE52AE904BC00A400FA /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		6191FAE72AE904DA00A400FA /* ProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStore.swift; sourceTree = "<group>"; };
+		6191FAEF2AEA55C400A400FA /* GeneralTimeReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTimeReminders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +121,20 @@
 			isa = PBXGroup;
 			children = (
 				6191FAA62AE902DE00A400FA /* GreenHabitApp.swift */,
+				6191FAD02AE9034500A400FA /* Profile.swift */,
+				6191FAD22AE9035E00A400FA /* NewProfileView.swift */,
+				6191FAD52AE9039300A400FA /* LocationSearchService.swift */,
+				6191FAD72AE903B600A400FA /* AddressPicker.swift */,
+				6191FAD92AE903CC00A400FA /* SearchBar.swift */,
+				6191FADB2AE9040E00A400FA /* SceneDelegate.swift */,
+				6191FADD2AE9042500A400FA /* Homepage.swift */,
+				6191FADF2AE9044D00A400FA /* InfoBoard.swift */,
+				6191FAE12AE9046300A400FA /* TimePicker.swift */,
+				6191FAE32AE9048700A400FA /* ProfileItem.swift */,
 				6191FAA82AE902DE00A400FA /* ContentView.swift */,
+				6191FAE52AE904BC00A400FA /* ContentViewModel.swift */,
+				6191FAEF2AEA55C400A400FA /* GeneralTimeReminders.swift */,
+				6191FAE72AE904DA00A400FA /* ProfileStore.swift */,
 				6191FAAA2AE902E000A400FA /* Assets.xcassets */,
 				6191FAAC2AE902E000A400FA /* Preview Content */,
 			);
@@ -257,8 +296,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6191FAE42AE9048700A400FA /* ProfileItem.swift in Sources */,
+				6191FAE62AE904BC00A400FA /* ContentViewModel.swift in Sources */,
+				6191FADA2AE903CC00A400FA /* SearchBar.swift in Sources */,
+				6191FAF02AEA55C400A400FA /* GeneralTimeReminders.swift in Sources */,
 				6191FAA92AE902DE00A400FA /* ContentView.swift in Sources */,
+				6191FAE02AE9044D00A400FA /* InfoBoard.swift in Sources */,
+				6191FAD42AE9036600A400FA /* NewProfileView.swift in Sources */,
+				6191FADE2AE9042500A400FA /* Homepage.swift in Sources */,
+				6191FAD12AE9034500A400FA /* Profile.swift in Sources */,
 				6191FAA72AE902DE00A400FA /* GreenHabitApp.swift in Sources */,
+				6191FAE82AE904DA00A400FA /* ProfileStore.swift in Sources */,
+				6191FAD82AE903B600A400FA /* AddressPicker.swift in Sources */,
+				6191FAD62AE9039300A400FA /* LocationSearchService.swift in Sources */,
+				6191FAE22AE9046300A400FA /* TimePicker.swift in Sources */,
+				6191FADC2AE9040E00A400FA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
