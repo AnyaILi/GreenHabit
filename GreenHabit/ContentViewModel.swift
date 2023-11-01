@@ -7,30 +7,43 @@
 import MapKit
 import UserNotifications
 enum MapDetails{
-    static let startingLocation = CLLocationCoordinate2D(latitude: 37.25112389382974, longitude: -121.96120101714706)
+    static let startingLocationHome = CLLocationCoordinate2D(latitude: 37.25112389382974, longitude: -121.96120101714706)
+//    static let startingLocationPark = CLLocationCoordinate2D(latitude: 37.30809597681093, longitude: -122.06163677488126)
     static let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
 }
 final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     
-    @Published var region = MKCoordinateRegion(center: MapDetails.startingLocation, span: MapDetails.defaultSpan)
+    @Published var regionHome = MKCoordinateRegion(center: MapDetails.startingLocationHome, span: MapDetails.defaultSpan)
+//    @Published var regionPark = MKCoordinateRegion(center: MapDetails.startingLocationPark, span: MapDetails.defaultSpan)
+
 //    var profile: ProfileItem
 //    init(profile: ProfileItem){
 //        self.profile = profile
 //        super.init()
 //    }
 //    @EnvironmentObject var profileStore: ProfileStore
+    
+    override init(){
+        super.init()
+//        monitorRegionAtLocation(center: MapDetails.startingLocation, identifier: "Home")
+        checkIfLocationServicesIsEnabled()
+    }
 
     var locationManager: CLLocationManager?
     
     func checkIfLocationServicesIsEnabled(){
+        checkLocationAuthorization()
         if CLLocationManager.locationServicesEnabled(){
             locationManager = CLLocationManager()
             locationManager?.desiredAccuracy = kCLLocationAccuracyBest
             locationManager!.delegate = self
             self.locationManager?.allowsBackgroundLocationUpdates = true
             self.locationManager?.showsBackgroundLocationIndicator = true
-            monitorRegionAtLocation(center: MapDetails.startingLocation, identifier: "Home")
+            locationManager!.requestAlwaysAuthorization()
+            monitorRegionAtLocation(center: MapDetails.startingLocationHome, identifier: "Home")
+//            monitorRegionAtLocation(center: MapDetails.startingLocationPark, identifier: "Park")
 
+            print("c")
         }
         else{
             print("Show an alert letting them know this is off")
@@ -47,7 +60,8 @@ final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDeleg
         case .denied:
             print("You have denied this app location permission. Go to settings to change it.")
         case .authorizedAlways,.authorizedWhenInUse:
-            region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MapDetails.defaultSpan)
+            regionHome = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MapDetails.defaultSpan)
+//            regionPark = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MapDetails.defaultSpan)
         @unknown default:
             break
         }
@@ -55,32 +69,45 @@ final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDeleg
     
     func monitorRegionAtLocation(center: CLLocationCoordinate2D, identifier: String ) {
         // Make sure the devices supports region monitoring.
+        print("e")
         if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
             // Register the region.
-            let maxDistance = locationManager!.maximumRegionMonitoringDistance
-            let region = CLCircularRegion(center: center,
-                 radius: maxDistance, identifier: identifier)
-            region.notifyOnEntry = true
-            region.notifyOnExit = false
-       
-            locationManager!.startMonitoring(for: region)
-            
+//            let maxDistance = locationManager!.maximumRegionMonitoringDistance
+            let regionHome = CLCircularRegion(center: center,
+                                          radius: 500.0, identifier: identifier)
+            regionHome.notifyOnEntry = true
+            regionHome.notifyOnExit = false
+
+//            let regionPark = CLCircularRegion(center: center,
+//                                          radius: 500.0, identifier: identifier)
+//            regionPark.notifyOnEntry = true
+//            regionPark.notifyOnExit = false
+
+            locationManager!.startMonitoring(for: regionHome)
+//            locationManager!.startMonitoring(for: regionPark)
+            print("b", regionHome.center, regionHome.radius)
         }
     }
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion){
-        let content = UNMutableNotificationContent()
-        content.title = "School"
-        content.subtitle = "Work"
-        content.sound = UNNotificationSound.default
+        print("a")
+//        if(region.identifier==regionHome.identifier){
+//            
+//        }
 
 //        var dateComponents = DateComponents()
 //        dateComponents.calendar = Calendar.current
-        var timeSuggestions = ["Turn off the lights. Turn off devices.", "Print less. Use both sides of paper. \n    Use digital resources, emails and e-books.", "Reduce food waste. Learn to compost \n    and recycle.", "Walk, bike, carpool or use public \n    transportation than drive.", "Reduce Screen Time. Spend more time \n    outdoors and connect with nature", "Reduce food waste. Learn to compost \n    and recycle.", "Take shorter showers. Turn off tap while \n    brushing teeth. Unplug."]
+        var timeSuggestions = ["Leave for School - Turn off the lights. Turn off devices.", "At School - Print less. Use both sides of paper. Use digital resources, emails and e-books.", "Lunch Time - Reduce food waste. Learn to compost and recycle.", "After School - Walk, bike, carpool or use public transportation than drive.", "After School Work - Reduce Screen Time. Spend more time outdoors and connect with nature", "Dinner - Reduce food waste. Learn to compost and recycle.", "Bed Time - Take shorter showers. Turn off tap while brushing teeth. Unplug."]
         
         let dateCurrent = Date()
         let calendarCurrent = Calendar.current
         let hourCurrent = calendarCurrent.component(.hour, from: dateCurrent)
         let minCurrent = calendarCurrent.component(.minute, from: dateCurrent)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "School"
+        content.subtitle = "Work"
+        content.sound = UNNotificationSound.default
+
 
 //        var dateComponents = DateComponents()
 //        dateComponents.calendar = Calendar.current
@@ -112,6 +139,16 @@ final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDeleg
         else if(hourCurrent>=22 && hourCurrent<=24){
             content.subtitle = timeSuggestions[6]
         }
+        var temp = hourCurrent
+        if(hourCurrent>12){
+            temp=hourCurrent-12
+        }
+        content.title = String(temp) + ":" + String(minCurrent)
+
+        if(minCurrent<10){
+            content.title = String(temp) + ":0" + String(minCurrent)
+        }
+
 
 //        let components = Calendar.current.dateComponents([.hour, .minute], from: )
 //        let hour = components.hour ?? 0
@@ -131,6 +168,7 @@ final class ContentViewModel: NSObject, ObservableObject, CLLocationManagerDeleg
 
         // add our notification request
         UNUserNotificationCenter.current().add(request)
+        print("called")
     }
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         checkLocationAuthorization()

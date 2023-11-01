@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Homepage: View {
-    var profile = ProfileItem(name: "", title: "", startTime: Foundation.Date(), endTime: Foundation.Date(), activity: "")
+    var profile = ProfileItem(name: "", title: "", startTime: Foundation.Date(), endTime: Foundation.Date(), lunchTime: Foundation.Date(), activity: "", bedTime: Foundation.Date())
     @StateObject private var viewModel: ContentViewModel
 
     init(profile: ProfileItem){
@@ -20,12 +20,36 @@ struct Homepage: View {
             Color(hex: "CDD7B6")
                 .ignoresSafeArea()
             VStack{
+                HStack{
+                    Image("flower1")
+                        .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.trailing)
+                        .frame(width: 150.0)
+                    Spacer()
+                }
+                Spacer()
+            }
+            VStack{
+                Spacer()
+                HStack{
+                    Spacer()
+                    Image("flower3")
+                        .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.trailing)
+                        .frame(width: 150.0)
+                        .rotationEffect(.degrees(180.0))
+                }
+            }
+
+            VStack{
                 Image("Clock")
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
                     .padding(.horizontal, 75.0)
                 Text("Welcome!")
-                    .font(.custom("KosugiMaru-Regular", size: 27))
+                    .font(.custom("AnnieUseYourTelescope-Regular", size: 30))
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(Color(hex: "8b8b8b"))
                     .padding(.horizontal, 30)
@@ -39,7 +63,7 @@ struct Homepage: View {
                      HStack{
                        VStack(alignment: .leading){
                          Text("Info Board")
-                               .font(.custom("KosugiMaru-Regular", size: 27))
+                               .font(.custom("AnnieUseYourTelescope-Regular", size: 30))
                            .foregroundColor(Color(hex: "8b8b8b"))
                            
                     }
@@ -62,7 +86,7 @@ struct Homepage: View {
                      HStack{
                        VStack(alignment: .leading){
                          Text("General Reminders")
-                               .font(.custom("KosugiMaru-Regular", size: 27))
+                               .font(.custom("AnnieUseYourTelescope-Regular", size: 30))
                            .foregroundColor(Color(hex: "8b8b8b"))
                            
                     }
@@ -82,7 +106,7 @@ struct Homepage: View {
                      HStack{
                        VStack(alignment: .leading){
                          Text("Profile")
-                               .font(.custom("KosugiMaru-Regular", size: 27))
+                               .font(.custom("AnnieUseYourTelescope-Regular", size: 30))
                            .foregroundColor(Color(hex: "8b8b8b"))
                            
                     }
@@ -108,5 +132,5 @@ struct Homepage: View {
 }
 
 #Preview {
-    Homepage(profile: ProfileItem(name: "", title: "", startTime: Foundation.Date(), endTime: Foundation.Date(), activity: ""))
+    Homepage(profile: ProfileItem(name: "", title: "", startTime: Foundation.Date(), endTime: Foundation.Date(), lunchTime: Foundation.Date(), activity: "", bedTime: Foundation.Date()))
 }

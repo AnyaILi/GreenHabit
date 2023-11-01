@@ -34,8 +34,9 @@ struct AddressPicker: View {
                             }){
                             VStack(alignment: .leading) {
                                 Text(completion.title)
+//                                    .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
                                 Text(completion.subtitle)
-                                    .font(.subheadline)
+//                                    .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
                                     .foregroundColor(.gray)
                             }
                         }

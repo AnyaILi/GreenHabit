@@ -18,9 +18,32 @@ struct InfoBoard: View {
         ZStack(alignment: .top){
             Color(hex: "CDD7B6")
                 .ignoresSafeArea()
+            VStack{
+                Spacer()
+                HStack{
+                    Spacer()
+                    Image("flower4")
+                        .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.trailing)
+                        .frame(width: 100.0)
+                        .rotationEffect(.degrees(283.0))
+                }
+            }
             ZStack{
                 Color(hex: "EAECE3")
                     .cornerRadius(30)
+                VStack{
+                    HStack{
+                        Image("flower1")
+                            .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.trailing)
+                            .frame(width: 100.0)
+                        Spacer()
+                    }
+                    Spacer()
+                }
                 VStack{
                     Image("Clock")
                         .resizable(resizingMode: .stretch)
@@ -30,7 +53,7 @@ struct InfoBoard: View {
                         Color(hex: "D9D9D9")
                             .cornerRadius(20)
                         Text("Info Board")
-                            .font(.title)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 30))
                             .padding(.leading)
                     }
                     .frame(width: 280.0, height: 50.0)
@@ -40,19 +63,7 @@ struct InfoBoard: View {
                         
                         HStack{
                             Button{
-                                let content = UNMutableNotificationContent()
-                                content.title = "Park"
-                                content.subtitle = "Leave no trace\nMinimize waste\nTake care not to disturb plants and animals"
-                                content.sound = UNNotificationSound.default
-
                                 
-                                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-                                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-
-                                // add our notification request
-                                UNUserNotificationCenter.current().add(request)
-                                print("done")
-
                                 if(t==0){
                                     t=4
                                 }
@@ -85,7 +96,7 @@ struct InfoBoard: View {
                                     .aspectRatio(contentMode: .fit)
                                     .padding(.top)
                                 Text(info[t])
-                                    .font(.title3)
+                                    .font(.custom("AnnieUseYourTelescope-Regular", size: 25))
                                     .padding()
                             }
                             Button{

@@ -19,19 +19,31 @@ struct Profile: View {
         ZStack{
             Color(hex: "f6efe7")
                 .ignoresSafeArea()
-            
+            VStack{
+                HStack{
+                    Image("flower3")
+                        .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.trailing)
+                        .frame(width: 160.0)
+                    Spacer()
+                }
+                Spacer()
+            }
             VStack {
                 HStack{
                     Text("Profile")
-                        .font(.custom("KosugiMaru-Regular", size: 40))
+                        .font(.custom("AnnieUseYourTelescope-Regular", size: 40))
                         .fontWeight(.black)
+                        .padding(.leading, 50.0)
+                        .padding(.top)
 
                     Spacer()
                     
                     NavigationLink("edit"){
                         NewProfileView()
-                            .navigationBarBackButtonHidden(true)
-                            .navigationBarHidden(true)
+//                            .navigationBarBackButtonHidden(true)
+//                            .navigationBarHidden(true)
                         
                     }
                     .foregroundColor(Color.black)
@@ -56,14 +68,70 @@ struct Profile: View {
                         let endCalendarCurrent = Calendar.current
                         let endHourCurrent = endCalendarCurrent.component(.hour, from: endTime) - 12
                         let endMinCurrent = endCalendarCurrent.component(.minute, from: endTime)
+                        
+                        let lunchTime = profileItem.lunchTime
+                        let lunchCalendarCurrent = Calendar.current
+                        let lunchHourCurrent = lunchCalendarCurrent.component(.hour, from: lunchTime)
+                        let lunchMinCurrent = lunchCalendarCurrent.component(.minute, from: lunchTime)
+
 
                         let activity = profileItem.activity
                         
-                        let display = "Name: " + name + "\n\nTitle: " + title + "\n\nSchool Start Time: " + String(startHourCurrent) + ":" + String(startMinCurrent) + "\n\nSchool End Time: " + String(endHourCurrent) + ":" + String(endMinCurrent) + "\n\nSchool Address: Valley Christian High School\n100 Skyway Dr, Unit 110, San Jose, CA 95111, United States" + "\n\nAfter School Activity: " + activity
+                        let bedTime = profileItem.bedTime
+                        let bedCalendarCurrent = Calendar.current
+                        let bedHourCurrent = bedCalendarCurrent.component(.hour, from: bedTime)-12
+                        let bedMinCurrent = bedCalendarCurrent.component(.minute, from: bedTime)
+
                         
-                        Text(display)
-                            .font(.subheadline)
+                        let displayName = "Name: " + name
+                        
+                        Text(displayName)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
                             .foregroundColor(Color(hex: "000000"))
+                        
+                        let displayOccupation = "Occupation: " + title
+                        
+                        Text(displayOccupation)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+                            .foregroundColor(Color(hex: "000000"))
+                        
+                        let displaySchoolStartTime = "School Start Time: " + String(startHourCurrent) + ":0" + String(startMinCurrent)
+                        
+                        Text(displaySchoolStartTime)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+                            .foregroundColor(Color(hex: "000000"))
+                        
+                        let displaySchoolEndTime = "School End Time: " + String(endHourCurrent) + ":" + String(endMinCurrent)
+                        
+                        Text(displaySchoolEndTime)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+                            .foregroundColor(Color(hex: "000000"))
+                        
+                        let displaySchoolAddress = "School Address: \nValley Christian High School\n100 Skyway Dr, Unit 110, San Jose, CA 95111, United States"
+
+                        Text(displaySchoolAddress)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+                            .foregroundColor(Color(hex: "000000"))
+
+                        let displayLunchTime = "Lunch Time: " + String(lunchHourCurrent) + ":0" + String(lunchMinCurrent)
+                        
+                        Text(displayLunchTime)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+                            .foregroundColor(Color(hex: "000000"))
+                        
+                        let displayAfterSchoolActivity = "After School Activity: " + activity
+                        
+                        Text(displayAfterSchoolActivity)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+                            .foregroundColor(Color(hex: "000000"))
+                        
+                        let displayBedTime =  "Bed Time: " + String(bedHourCurrent) + ":" + String(bedMinCurrent)
+                        
+                        Text(displayBedTime)
+                            .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+                            .foregroundColor(Color(hex: "000000"))
+
+
 
                     }
 

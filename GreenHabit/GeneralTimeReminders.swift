@@ -42,8 +42,32 @@ struct GeneralTimeReminders: View {
             Color(hex: "f6efe7")
                 .ignoresSafeArea()
             VStack{
+                HStack{
+                    Spacer()
+                    Image("flower2")
+                        .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.trailing)
+                        .frame(width: 100.0)
+                        .rotationEffect(.degrees(180.0))
+                }
+                Spacer()
+            }
+            VStack{
+                Spacer()
+                HStack{
+                    Image("flower3")
+                        .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.trailing)
+                        .frame(width: 200.0)
+                        .rotationEffect(.degrees(270.0))
+                    Spacer()
+                }
+            }
+            VStack{
                 //        let time = ["8:00", "10:00", "12:00", "2:00", "4:00", "8:00", "10:00"]
-                var timeSuggestions = ["Turn off the lights. Turn off devices.", "Print less. Use both sides of paper. \n    Use digital resources, emails and e-books.", "Reduce food waste. Learn to compost \n    and recycle.", "Walk, bike, carpool or use public \n    transportation than drive.", "Reduce Screen Time. Spend more time \n    outdoors and connect with nature", "Reduce food waste. Learn to compost \n    and recycle.", "Take shorter showers. Turn off tap while \n    brushing teeth. Unplug."]
+                var timeSuggestions = ["Turn off the lights. Turn off devices.", "Print less. Use both sides of paper. Use digital resources, emails and e-books.", "Reduce food waste. Learn to compost and recycle.", "Walk, bike, carpool or use public transportation than drive.", "Reduce Screen Time. Spend more time outdoors and connect with nature", "Reduce food waste. Learn to compost and recycle.", "Take shorter showers. Turn off tap while brushing teeth. Unplug."]
                 
                 let dateCurrent = Date()
                 let calendarCurrent = Calendar.current
@@ -51,7 +75,7 @@ struct GeneralTimeReminders: View {
                 let minCurrent = calendarCurrent.component(.minute, from: dateCurrent)
                 
                 Text(message3)
-                    .font(.title3)
+                    .font(.custom("AnnieUseYourTelescope-Regular", size: 25))
 
 
                 Button{
@@ -107,7 +131,7 @@ struct GeneralTimeReminders: View {
                     Image("Clock")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
-                        .frame(height: 300.0)
+                        .frame(height: 200.0)
                 }
                 //Spacer()
 
@@ -115,7 +139,7 @@ struct GeneralTimeReminders: View {
                 VStack(alignment: .center){
 
                     Text(time)
-                        .font(.largeTitle)
+                        .font(.custom("AnnieUseYourTelescope-Regular", size: 40))
 //                        .padding(.leading, 50.0)
 
                                         //                    Text(message)
@@ -135,6 +159,8 @@ struct GeneralTimeReminders: View {
                             .toggleStyle(CheckToggleStyle())
                             
                             Text(message)
+                                .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+
                             
                         }
                         .padding(.all)
@@ -147,6 +173,8 @@ struct GeneralTimeReminders: View {
                             .toggleStyle(CheckToggleStyle())
                             
                             Text(message1)
+                                .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+
                             
                         }
                         .padding(.all)
@@ -159,6 +187,8 @@ struct GeneralTimeReminders: View {
                             .toggleStyle(CheckToggleStyle())
                             
                             Text(message2)
+                                .font(.custom("AnnieUseYourTelescope-Regular", size: 20))
+
                             
                         }
                         .padding(.all)

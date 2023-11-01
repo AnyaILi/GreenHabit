@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6182D1722AEE39D3009BC329 /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1712AEE39D3009BC329 /* IndieFlower-Regular.ttf */; };
+		6182D1732AEE39D3009BC329 /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1712AEE39D3009BC329 /* IndieFlower-Regular.ttf */; };
+		6182D1742AEE39D3009BC329 /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1712AEE39D3009BC329 /* IndieFlower-Regular.ttf */; };
+		6182D1762AEE3A03009BC329 /* KosugiMaru-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1752AEE3A03009BC329 /* KosugiMaru-Regular.ttf */; };
+		6182D1772AEE3A03009BC329 /* KosugiMaru-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1752AEE3A03009BC329 /* KosugiMaru-Regular.ttf */; };
+		6182D1782AEE3A03009BC329 /* KosugiMaru-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1752AEE3A03009BC329 /* KosugiMaru-Regular.ttf */; };
+		6182D17A2AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1792AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf */; };
+		6182D17B2AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1792AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf */; };
+		6182D17C2AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6182D1792AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf */; };
 		6191FAA72AE902DE00A400FA /* GreenHabitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAA62AE902DE00A400FA /* GreenHabitApp.swift */; };
 		6191FAA92AE902DE00A400FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6191FAA82AE902DE00A400FA /* ContentView.swift */; };
 		6191FAAB2AE902E000A400FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6191FAAA2AE902E000A400FA /* Assets.xcassets */; };
@@ -47,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6182D1712AEE39D3009BC329 /* IndieFlower-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IndieFlower-Regular.ttf"; sourceTree = "<group>"; };
+		6182D1752AEE3A03009BC329 /* KosugiMaru-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KosugiMaru-Regular.ttf"; sourceTree = "<group>"; };
+		6182D1792AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnnieUseYourTelescope-Regular.ttf"; sourceTree = "<group>"; };
 		6191FAA32AE902DE00A400FA /* GreenHabit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenHabit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6191FAA62AE902DE00A400FA /* GreenHabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenHabitApp.swift; sourceTree = "<group>"; };
 		6191FAA82AE902DE00A400FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +109,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6182D1702AEE36C2009BC329 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6182D1792AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf */,
+				6182D1712AEE39D3009BC329 /* IndieFlower-Regular.ttf */,
+				6182D1752AEE3A03009BC329 /* KosugiMaru-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		6191FA9A2AE902DE00A400FA = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +142,7 @@
 		6191FAA52AE902DE00A400FA /* GreenHabit */ = {
 			isa = PBXGroup;
 			children = (
+				6182D1702AEE36C2009BC329 /* Font */,
 				6191FAA62AE902DE00A400FA /* GreenHabitApp.swift */,
 				6191FAD02AE9034500A400FA /* Profile.swift */,
 				6191FAD22AE9035E00A400FA /* NewProfileView.swift */,
@@ -270,8 +293,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6182D1762AEE3A03009BC329 /* KosugiMaru-Regular.ttf in Resources */,
 				6191FAAE2AE902E000A400FA /* Preview Assets.xcassets in Resources */,
 				6191FAAB2AE902E000A400FA /* Assets.xcassets in Resources */,
+				6182D1722AEE39D3009BC329 /* IndieFlower-Regular.ttf in Resources */,
+				6182D17A2AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +305,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6182D1772AEE3A03009BC329 /* KosugiMaru-Regular.ttf in Resources */,
+				6182D17B2AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf in Resources */,
+				6182D1732AEE39D3009BC329 /* IndieFlower-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +315,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6182D1782AEE3A03009BC329 /* KosugiMaru-Regular.ttf in Resources */,
+				6182D17C2AEE3F3F009BC329 /* AnnieUseYourTelescope-Regular.ttf in Resources */,
+				6182D1742AEE39D3009BC329 /* IndieFlower-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +509,11 @@
 				DEVELOPMENT_TEAM = GU5PL66C82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GreenHabit/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app uses user's loaction to send constant green reminders throughout the day";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app uses user's loaction to send constant green reminders throughout the day";
+				INFOPLIST_KEY_NSLocationUsageDescription = "This app uses user's loaction to send constant green reminders throughout the day";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses user's loaction to send constant green reminders throughout the day";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -506,6 +543,11 @@
 				DEVELOPMENT_TEAM = GU5PL66C82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GreenHabit/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app uses user's loaction to send constant green reminders throughout the day";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app uses user's loaction to send constant green reminders throughout the day";
+				INFOPLIST_KEY_NSLocationUsageDescription = "This app uses user's loaction to send constant green reminders throughout the day";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses user's loaction to send constant green reminders throughout the day";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

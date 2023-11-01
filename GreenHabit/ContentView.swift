@@ -23,7 +23,7 @@ struct ContentView: View {
     var profile: ProfileItem? {
         profileStore.profile.count == 0 ? nil : profileStore.profile[0]
     }
-//    var cvm = ContentViewModel()
+    var cvm = ContentViewModel()
     
     
     //    for profileItem in profileItems{

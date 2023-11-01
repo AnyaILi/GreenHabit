@@ -13,14 +13,20 @@ class ProfileItem: Identifiable, Codable{
     var name : String
     var startTime: Date
     var endTime: Date
+    var lunchTime: Date
     var activity: String
+    var bedTime: Date
+
     
     
-    init(name: String, title: String, startTime: Date, endTime: Date, activity: String){
+    init(name: String, title: String, startTime: Date, endTime: Date, lunchTime: Date, activity: String, bedTime: Date){
         self.title = title
         self.name = name
         self.startTime = startTime
         self.endTime = endTime
+        self.lunchTime = lunchTime
         self.activity = activity
+        self.bedTime = bedTime
+
     }
 }
